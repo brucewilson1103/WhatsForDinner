@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MealPrep</title>
+  <!-- Material Icon CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Princess Sofia|Playfair+Display:400,700" rel="stylesheet">
+ 
+
+ 
+ <style>
+
+.card-title {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  font-size: 16px !important;
+  background-color: transparent;
+}
+#title {
+    color: rgb(19, 18, 18);
+    font-weight: bold;
+    font-family: 'Playfair Display', cursive;
+    text-shadow: 4px 4px 4px rgb(253, 252, 252);
+
+  }
+    /* width */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  </style>
+
+
+</head>
+
+<body id="repBody">
+
+
+  <div class="card-panel jumbotronStyle" id="panelHead">
+    <div><a href="index.html">
+      <h1 id="hTag">Mortar & Pestle</h1></a>
+    </div>
+  </div>
+
+  <div style="width:90%;margin:0 auto;">
+
+    <ul id="dropdown1" class="dropdown-content">
+
+      <li><a href="#" onclick="menu_click(this)">Breakfast</a></li>
+      <li><a href="#" onclick="menu_click(this)">Lunch</a></li>
+      <li><a href="#" onclick="menu_click(this)">Dinner</a></li>
+      <li><a href="#" onclick="menu_click(this)">Dessert</a></li>
+
+    </ul>
+
+    <ul id="dropdown2" class="dropdown-content">
+
+      <li><a href="#" onclick="menu_click(this)">American</a></li>
+      <li><a href="#" onclick="menu_click(this)">Mexican</a></li>
+      <li><a href="#" onclick="menu_click(this)">Indian</a></li>
+      <li><a href="#" onclick="menu_click(this)">Italian</a></li>
+      <li><a href="#" onclick="menu_click(this)">Chinese</a></li>
+      <li><a href="#" onclick="menu_click(this)">Japanese</a></li>
+      <li><a href="#" onclick="menu_click(this)">French</a></li>
+
+    </ul>
+
+
+    <ul id="dropdown3" class="dropdown-content">
+
+      <li><a href="#" onclick="menu_click(this)">Meat</a></li>
+      <li><a href="#" onclick="menu_click(this)">Fish</a></li>
+      <li><a href="#" onclick="menu_click(this)">Vegetables</a></li>
+
+    </ul>
+
+
+    <!-- Drop Down Menus -->
+    <div>
+
+      <a class="dropdown-button btn" href="#!" data-activates="dropdown1">Meal Type
+        <i class="material-icons left">playlist_add_check</i>
+      </a>
+
+      <a class="dropdown-button btn" href="#!" data-activates="dropdown2">Cuisine
+        <i class="material-icons left">playlist_add_check</i>
+      </a>
+
+      <a class="dropdown-button btn" href="#!" data-activates="dropdown3">Ingredients
+        <i class="material-icons left">playlist_add_check</i>
+      </a>
+
+    </div>
+
+    <!-- API -->
+
+    <p class="lead">
+
+      <span style="font-size:20px;padding-right:25px;" id="title">
+        Nothing Selected
+      </span>
+
+      <a class="btn waves-effect" href="#" role="button" id="search_recipe">Search</a>
+
+    </p>
+
+  </div>
+
+  <div style="width:90%;margin:0 auto;background:#ececec25;border:1px solid #536e7911;">
+
+    <div class="row" style="margin-bottom:auto;">
+
+        <div id="appendDiv">
+
+        </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  <script src="./assets/javascript/recipes.js"></script>
+
+</body>
+
+</html>
+
+ 
